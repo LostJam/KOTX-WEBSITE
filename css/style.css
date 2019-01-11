@@ -1,28 +1,38 @@
-body{
+body,
+html {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+body {
     margin: 0;
     padding: 0;
-    width: 100%;
     background-color: black;
-    }
-    h1 {
-    font-family:"Arvo";
-    font-weight:normal;
+}
+
+/* for eggroll pls feel free to change fonts! */
+h1 {
+    font-family: "Arvo";
+    font-weight: normal;
     font-size: 55px;
     text-align: center;
-    color: #fff;
+    color: rgb(252, 180, 180);
     margin: 0;
     padding: 0;
-    }
-    h2 {
-    font-family:"Arvo";
+}
+
+h2 {
+    font-family: "Arvo";
     font-weight: normal;
     font-size: 40px;
     text-align: center;
     color: #fff;
     margin: 0;
     padding: 0;
-    }
-    h3 {
+}
+
+h3 {
     font-family: Oswald;
     font-weight: normal;
     font-size: 16px;
@@ -31,120 +41,137 @@ body{
     padding: 0;
     z-index: 1;
     position: relative;
-    }
-    .center { margin: 0 auto; }
-    .content{ margin: 0 auto; width: 960px; }
-    .clear { clear: both; }
-
-    #header {
-        width: 100%;
-        background: url('../img/header-bg.png');
-        height: 80px;
-        position: fixed;
-        margin-top: 30px;
-        }
-        #nav { width: 410px; float: right; margin-top: 20px; }
-        #logo a { color: #fff; text-decoration: none; float: left; font-size: 30px; margin-top: 20px; color: #fff; font-family:"Wellfleet"; font-weight: bold; }
-        #nav ul{
-        list-style: none;
-        display: block;
-        margin: 0 auto;
-        list-style: none;
-        }
-        #nav li{
-        margin-top: 9px;
-        float: left;
-        padding-left: 21px;
-        }
-        #nav li a { color: #fff; opacity:0.6; font-size: 16px; text-decoration: none; font-family: 'Wellfleet'; }
-        #nav li a.active { color: #fff; opacity:1; border-bottom: 2px solid #fff; }
-        #nav li a:hover { color: #fff; opacity:1; }
-
-        .quotes {
-            font-family: 'Goudy Bookletter 1911', serif;
-            font-weight: normal;
-            font-size: 30px;
-            text-align: left;
-            margin: 50px auto;
-            }
-            
-             .author_name_white { font-family:"Wellfleet"; margin: 70px 0 0 75px; color: #fff; font-size: 20px; } 
-             .author_name_gray { font-family:"Wellfleet"; margin: 70px 0 0 75px; color: #94a4a4; font-size: 20px; } 
-             .quotes_container { width: 800px; margin: 0 auto; }
-            #christmas_tree { background: url('../img/christmas-tree.png')no-repeat; width: 48px; height: 77px; margin: 0 auto; position: relative; bottom: -35px;}
-            #divider { background: url('../img/divider.png')no-repeat; width: 300px; height: 35px; margin: 0px auto 27px auto; }
-            #ribbon { background: url('../img/ribbon.png')no-repeat; width: 251px; height: 48px; margin: 0 auto; display: block; position: relative; top: -38px; }
-            #snowflakes1 { background: url('../img/snowflakes.png')no-repeat; width: 24px; height: 21px; margin: 0 auto; display: block; position: relative; bottom: -54px; left: -102px; }
-            #snowflakes2 { background: url('../img/snowflakes.png')no-repeat; width: 24px; height: 21px; margin: 0 auto; display: block; position: relative; bottom: -33px; right: -100px; }
-
-            #slide1, #slide2{ width: 100%; }
-#slide1{
-/*background:url('../img/slide1.jpg') 50% 0 no-repeat fixed;*/
-
-color: #fff;
-height: 600px;
-margin: 0;
-padding: 200px 0 260px 0;
-background-size: cover;
-}
-#slide2{
-background-color: #fff;
-color: #333333;
-height: 300px;
-margin: 0 auto;
-overflow: hidden;
-padding: 200px 0;
-}
-#slide3{
-background: url(../img/slide3.jpg) 50% 0 no-repeat fixed;
-color: #fff;
-height: 600px;
-padding: 170px 0 0 0;
-background-size: cover;
-}
-#slide4{
-background-color: #fff;
-color: #333333;
-height: 300px;
-padding: 200px 0;
-}
-#slide5{
-background: url(../img/slide5.jpg) 50% 0 no-repeat fixed;
-height: 200px;
-margin: 0 auto;
-padding: 250px 0;
-color: #fff;
-background-size: cover;
 }
 
+.center {
+    margin: 0 auto;
+}
+
+.content {
+    margin: 0 auto;
+}
+
+.clear {
+    clear: both;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    width: calc(100% - 2em);
+    background-color: rgba(0, 0, 0, 0.57);
+    position: fixed;
+    font-family: "Wellfleet";
+}
+
+#home a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 0.5em;
+}
+
+nav li a {
+    color: #fff;
+    opacity: 0.6;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+nav li a.active {
+    color: #fff;
+    opacity: 1;
+    border-bottom: 2px solid #fff;
+}
+
+nav li a:hover {
+    color: #fff;
+    opacity: 1;
+}
+
+#slide1,
+#slide2 {
+    width: 100%;
+}
+
+#slide1 {
+    background:url('../img/yuna.png') 50% 0 no-repeat fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    height: 80%;
+    margin: 0;
+    background-size: cover;
+
+}
+
+#slide2 {
+    background-color: #fff;
+    color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+
+}
+
+#slide3 {
+    background: url(../img/vixx.png) 50% 0 no-repeat fixed;
+    color: #fff;
+    padding: 5em 0;
+    background-size: cover;
+}
 
 .wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    grid-auto-rows: minmax(80px, auto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.wrapper .video {
+    background-color: black;
+    margin: 0.5em;
+    width: 600px;
+    height: 340px;
+}
+
+@media only screen and (max-width: 900px) {
+    .wrapper .video {
+      width: 300px;
+      height: 170px;
+    }
   }
-  .one {
-    grid-column: 1;
-    grid-row: 1;
-  }
-  .two { 
-    grid-column: 2;
-    grid-row: 1;
-  }
-  .three {
-    grid-column: 3;
-    grid-row: 1;
-  }
-  .four {
-    grid-column: 1;
-    grid-row: 2;
-  }
-  .five {
-    grid-column: 2;
-    grid-row: 2;
-  }
-  .six {
-    grid-column: 3;
-    grid-row: 2;
-  }
+
+  /* @media only screen and (min-width: 900px) {
+    .wrapper .video {
+      width: 600px;
+      height: 340px;
+    }
+  } */
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #862e5f
+}
+
+img#klogo {
+    width: 300px;
+}
