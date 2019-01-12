@@ -1,123 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
- <title>Parallax Kotx Website</title>
- <link rel="stylesheet" href="css/style.css"/>
- <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
- <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
- <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'> 
- <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
- <link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
- <script>
 
-$(document).ready(function() { function filterPath(string) { return string .replace(/^\//,'') .replace(/(index|default).[a-zA-Z]{3,4}$/,'') .replace(/\/$/,''); } var locationPath = filterPath(location.pathname); var scrollElem = scrollableElement('html', 'body'); $('a[href*=#]').each(function() { var thisPath = filterPath(this.pathname) || locationPath; if ( locationPath == thisPath && (location.hostname == this.hostname || !this.hostname) && this.hash.replace(/#/,'') ) { var $target = $(this.hash), target = this.hash; if (target) { var targetOffset = $target.offset().top; $(this).click(function(event) { event.preventDefault(); $(scrollElem).animate({scrollTop: targetOffset}, 400, function() { location.hash = target; }); }); } } }); // use the first element that is "scrollable" 
-function scrollableElement(els) { for (var i = 0, argLength = arguments.length; i < argLength; i++) { var el = arguments[i], $scrollElement = $(el); if ($scrollElement.scrollTop() > 0) { return el; } else { $scrollElement.scrollTop(1); var isScrollable = $scrollElement.scrollTop() > 0; $scrollElement.scrollTop(0); if (isScrollable) { return el; } } } return []; } });
- </script>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Parallax Kotx Website</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <!-- smooth scrolling script and active -->
+  <script>
+        $(document).ready(function () {
+            function filterPath(string) { 
+                return string.replace(/^\//, '').replace(/(index|default).[a-zA-Z]{3,4}$/, '').
+            replace(/\/$/, ''); 
+            } var locationPath = filterPath(location.pathname); 
+            var scrollElem = scrollableElement('html', 'body');
+             $('a[href*=#]').each(function () { 
+                 var thisPath = filterPath(this.pathname) || locationPath; 
+                if (locationPath == thisPath && 
+             (location.hostname == this.hostname || !this.hostname) && this.hash.replace(/#/, '')) { 
+                 var $target = $(this.hash), target = this.hash; 
+                 if (target) {
+                var targetOffset = $target.offset().top; 
+                $(this).click(function (event) {
+                     event.preventDefault(); 
+                     //  TODO figure out why they all remain active
+                     $("#nav li a").removeClass("active");
+                     $(this).addClass('active');
+
+                     $(scrollElem).animate({ scrollTop: targetOffset }, 400, function () {
+                        location.hash = target; }); }); } } }); 
+                        // use the first element that is "scrollable" 
+                        
+            function scrollableElement(els) { 
+                for (var i = 0, argLength = arguments.length; i < argLength; i++) 
+            { var el = arguments[i], $scrollElement = $(el); 
+            if ($scrollElement.scrollTop() > 0) { return el; } 
+            else { $scrollElement.scrollTop(1); var isScrollable = $scrollElement.scrollTop() > 0; $scrollElement.scrollTop(0); 
+            if (isScrollable) 
+            { return el; } } } return []; }
+        });
+
+
+
+    </script>
 </head>
 
 <body>
-    <!-- Beginning of Parralax--> 
     <header id="header">
-    <div class="content">
-    <div id="logo"><a href=""> UCSD KOTX </a></div>
-    <nav id="nav">
-     <ul>
-     <li><a href="#slide1" class="active" title="Next Section" >Covers</a></li>
-     <li><a href="#slide2" title="Next Section">About</a></li>
-     <li><a href="#slide3" title="Next Section">Events</a></li>
-     </ul>
-    </nav>
-    </div>
-    </header>
-    <!-- slides start --> 
- <div id="slide1">
- <div class="content">
- <div id="christmas_tree"> </div>
- <div id="snowflakes1"></div>
- <div id="snowflakes2"></div>
- <h2>COVERS</h2>
- <h1>
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-        <div class=wrapper>
- 
-            <div class=one>
-                <iframe class="latestVideoEmbed" vnum='0' cid="UCgcEhdU3KiKmpR0RKVwOFMg" width="600" height="340" frameborder="0" allowfullscreen></iframe>
-            </div>
-            
-            <div class=two>
-                <iframe class="latestVideoEmbed" vnum='1' cid="UCgcEhdU3KiKmpR0RKVwOFMg" width="600" height="340" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class=three>
-                <iframe class="latestVideoEmbed" vnum='2' cid="UCgcEhdU3KiKmpR0RKVwOFMg" width="600" height="340" frameborder="0" allowfullscreen></iframe>
-            </div>
-
-            <div class=four>
-                <iframe class="latestVideoEmbed" vnum='3' cid="UCgcEhdU3KiKmpR0RKVwOFMg" width="600" height="340" frameborder="0" allowfullscreen></iframe>
-            </div>
-
-            <div class=five>
-                    <iframe class="latestVideoEmbed" vnum='4' cid="UCgcEhdU3KiKmpR0RKVwOFMg" width="600" height="340" frameborder="0" allowfullscreen></iframe>
-                </div>
-
-                <div class=six>
-                        <iframe class="latestVideoEmbed" vnum='5' cid="UCgcEhdU3KiKmpR0RKVwOFMg" width="600" height="340" frameborder="0" allowfullscreen></iframe>
-                    </div>
-            
-            
+        <!-- menu bar home button -->
+        <div id="home">
+            <a href="#">UCSD KOTX</a>
         </div>
+        <!-- menu bar of slides -->
+        <nav>
+            <ul>
+                <li>
+                    <a href="#slide1" title="Next Section">About</a>
+                </li>
+                <li>
+                    <a href="#slide2" title="Next Section">Contact</a>
+                </li>
+                <li>
+                    <a href="#slide3" title="Next Section">Covers</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- slides start -->
+    
+    <!-- home page  -->
+    <div class="flex-container">
+        <img id="klogo" src="img/Logo.png" />
+    </div>
+
+    <!-- about section -->
+    <div id="slide1">
+        <div class="content">
+
+            <h2>ABOUT US:</h2>
+           
+            <h3>KOTX is a dance team and social org with glow sticks and gradient lips</h3>
         
-        <script>
-        var reqURL = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent("https://www.youtube.com/feeds/videos.xml?channel_id=");
-        function loadVideo(iframe){
-            $.getJSON( reqURL + iframe.getAttribute('cid'),
-              function(data) {
-                 var videoNumber = (iframe.getAttribute('vnum')?Number(iframe.getAttribute('vnum')):0);
-                console.log(videoNumber);
-                 var link = data.items[videoNumber].link;
-                 id = link.substr(link.indexOf("=") + 1);  
-                 iframe.setAttribute("src","https://youtube.com/embed/"+id + "?controls=0&autoplay=1");
-              }
-           );
-        }
-        var iframes = document.getElementsByClassName('latestVideoEmbed');
-        for (var i = 0, len = iframes.length; i < len; i++){
-                // TODO: change element parent to include flex classes
+
+        </div>
+    </div>
+
+    <!-- contact us section -->
+    <div id="slide2">
+        <div class="content">
+
+            <h1>“Contact Us!”</h1>
+            <h3> email us at kotx.ucsd.edu </h3>
+
+        </div>
+    </div>
+
+    <div id="slide3">
+            <!-- Youtube Videos -->
+            <!-- TODO: figure out why lullaby doesn't work -->
+            <div class="video-media-youtube">
+                    <ul class="video__container">
+                        <li class="video__content">
+                                <h2>Join One of Our Cover Teams!</h2>
+                                <br>
+                            <ul class="video-media-youtube-inner">
+                                <li class="media__embed">
+                                     
+                                      <div class="video-media-youtube-inner-vi video-media-youtube-inner-vi--ratio">
+                                        <iframe class="latestVideoEmbed" vnum="0" cid="UCgcEhdU3KiKmpR0RKVwOFMg" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+                                      </div>
+                                </li>
             
-               loadVideo(iframes[i]);  
+                                <li class="media__embed">
+                                      
+                                      <div class="video-media-youtube-inner-vi video-media-youtube-inner-vi--ratio">
+                                            <iframe class="latestVideoEmbed" vnum="1" cid="UCgcEhdU3KiKmpR0RKVwOFMg" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+                                        </div>
+                                </li>
+                              </ul> 
+                        </li>
+        
+                        <li class="video__content">
+                          
+                              <ul class="video-media-youtube-inner">
+                                <li class="media__embed">
+                               
+                                      <div class="video-media-youtube-inner-vi video-media-youtube-inner-vi--ratio">
+                                            <iframe class="latestVideoEmbed" vnum="2" cid="UCgcEhdU3KiKmpR0RKVwOFMg" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+                                        </div>
+                                </li>
+            
+                                <li class="media__embed">
+                                     
+                                      <div class="video-media-youtube-inner-vi video-media-youtube-inner-vi--ratio">
+                                            <iframe class="latestVideoEmbed" vnum="3" cid="UCgcEhdU3KiKmpR0RKVwOFMg" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+                                        </iframe>
+                                      </div>
+                                </li>
+                              </ul> 
+                        </li>
+    
+                        <li class="video__content">
+                           
+                              <ul class="video-media-youtube-inner">
+                                <li class="media__embed">
+                                      
+                                      <div class="video-media-youtube-inner-vi video-media-youtube-inner-vi--ratio">
+                                            <iframe class="latestVideoEmbed" vnum="4" cid="UCgcEhdU3KiKmpR0RKVwOFMg" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+                                        </div>
+                                </li>
+            
+                                <li class="media__embed">
+                           
+                                      <div class="video-media-youtube-inner-vi video-media-youtube-inner-vi--ratio">
+                                            <iframe class="latestVideoEmbed" vnum="5" cid="UCgcEhdU3KiKmpR0RKVwOFMg" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+                                        </div>
+                                </li>
+                              </ul> 
+                        </li>
+                      </ul>     
+                </div>
+            <!--Youtube Video Next Most Recent Script -->
+            <script>
+                let reqURL = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent("https://www.youtube.com/feeds/videos.xml?channel_id=");
+                function loadVideo(iframe) {
+                    $.getJSON(reqURL + iframe.getAttribute('cid'),
+                        function (data) {
+                            let videoNumber = (iframe.getAttribute('vnum') ? Number(iframe.getAttribute('vnum')) : 0);
+                            let link = data.items[videoNumber].link;
+                            id = link.substr(link.indexOf("=") + 1);
+                            iframe.setAttribute("src", "https://youtube.com/embed/" + id + "?controls=0&autoplay=0");
+                        }
+                    );
+                }
+                let iframes = document.getElementsByClassName('latestVideoEmbed');
+                for (let i = 0, len = iframes.length; i < len; i++) {
+                    loadVideo(iframes[i]);
+                }
+            </script>
+        
+    </div>
 
-               
-
-        }
-        </script>
-       
- </h1>
- <div id="divider"> </div>
- <h3>HAPPY NEW YEAR </h3>
- <div id="ribbon"></div>
- <div id="new_year"> </div>
- </div> 
- </div> 
- <div id="slide2">
- <div class="content" >
- <div class="quotes_container">
- <h3 class="quotes">“Dance Dance”</h3>
- <img src="img/dr-seuss.png" align="left"/> <h4 class="author_name_gray">jam </h4>
- </div> 
- </div> 
- </div> 
- <div id="slide3">
- <div class="content">
- <div class="quotes_container">
- <h3 class="quotes">“” </h3>
- <img src="img/norman.png" align="left"/> <h4 class="author_name_white">Aprol </h4>
- </div> 
- </div> 
- </div> 
-
- </div> 
- <!-- SLIDES END -->
+    </div>
+    <!-- SLIDES END -->
 </body>
+
 </html>
