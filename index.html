@@ -71,6 +71,7 @@
         </nav>
     </header>
     <!-- slides start -->
+    
     <!-- home page  -->
     <div class="flex-container">
         <img id="klogo" src="img/Logo.png" />
@@ -99,36 +100,70 @@
     </div>
 
     <div id="slide3">
-        <div class="content">
-
-            <div class="wrapper">
-<!-- TODO: how to make embedded youtube video adhere to container -->
-                <div class="video">
-                    <iframe class="latestVideoEmbed" vnum='0' cid="UCgcEhdU3KiKmpR0RKVwOFMg" frameborder="0" allowfullscreen></iframe>
+            <!-- Youtube Videos -->
+            <!-- TODO: figure out why lullaby doesn't work -->
+            <div class="video-media-youtube">
+                    <ul class="video__container">
+                        <li class="video__content">
+                                <h2>Join One of Our Cover Teams!</h2>
+                                <br>
+                            <ul class="video-media-youtube-inner">
+                                <li class="media__embed">
+                                     
+                                      <div class="video-media-youtube-inner-vi video-media-youtube-inner-vi--ratio">
+                                        <iframe class="latestVideoEmbed" vnum="0" cid="UCgcEhdU3KiKmpR0RKVwOFMg" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+                                      </div>
+                                </li>
+            
+                                <li class="media__embed">
+                                      
+                                      <div class="video-media-youtube-inner-vi video-media-youtube-inner-vi--ratio">
+                                            <iframe class="latestVideoEmbed" vnum="1" cid="UCgcEhdU3KiKmpR0RKVwOFMg" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+                                        </div>
+                                </li>
+                              </ul> 
+                        </li>
+        
+                        <li class="video__content">
+                          
+                              <ul class="video-media-youtube-inner">
+                                <li class="media__embed">
+                               
+                                      <div class="video-media-youtube-inner-vi video-media-youtube-inner-vi--ratio">
+                                            <iframe class="latestVideoEmbed" vnum="2" cid="UCgcEhdU3KiKmpR0RKVwOFMg" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+                                        </div>
+                                </li>
+            
+                                <li class="media__embed">
+                                     
+                                      <div class="video-media-youtube-inner-vi video-media-youtube-inner-vi--ratio">
+                                            <iframe class="latestVideoEmbed" vnum="3" cid="UCgcEhdU3KiKmpR0RKVwOFMg" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+                                        </iframe>
+                                      </div>
+                                </li>
+                              </ul> 
+                        </li>
+    
+                        <li class="video__content">
+                           
+                              <ul class="video-media-youtube-inner">
+                                <li class="media__embed">
+                                      
+                                      <div class="video-media-youtube-inner-vi video-media-youtube-inner-vi--ratio">
+                                            <iframe class="latestVideoEmbed" vnum="4" cid="UCgcEhdU3KiKmpR0RKVwOFMg" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+                                        </div>
+                                </li>
+            
+                                <li class="media__embed">
+                           
+                                      <div class="video-media-youtube-inner-vi video-media-youtube-inner-vi--ratio">
+                                            <iframe class="latestVideoEmbed" vnum="5" cid="UCgcEhdU3KiKmpR0RKVwOFMg" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+                                        </div>
+                                </li>
+                              </ul> 
+                        </li>
+                      </ul>     
                 </div>
-
-                <div class="video">
-                    <iframe class="latestVideoEmbed" vnum='1' cid="UCgcEhdU3KiKmpR0RKVwOFMg" frameborder="0" allowfullscreen></iframe>
-                </div>
-
-                <div class="video">
-                    <iframe class="latestVideoEmbed" vnum='2' cid="UCgcEhdU3KiKmpR0RKVwOFMg" frameborder="0" allowfullscreen></iframe>
-                </div>
-
-                <div class="video">
-                    <iframe class="latestVideoEmbed" vnum='3' cid="UCgcEhdU3KiKmpR0RKVwOFMg" frameborder="0" allowfullscreen></iframe>
-                </div>
-
-                <div class="video">
-                    <iframe class="latestVideoEmbed" vnum='4' cid="UCgcEhdU3KiKmpR0RKVwOFMg" frameborder="0" allowfullscreen></iframe>
-                </div>
-
-                <div class="video">
-                    <iframe class="latestVideoEmbed" vnum='5' cid="UCgcEhdU3KiKmpR0RKVwOFMg" frameborder="0" allowfullscreen></iframe>
-                </div>
-
-            </div>
-
             <!--Youtube Video Next Most Recent Script -->
             <script>
                 let reqURL = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent("https://www.youtube.com/feeds/videos.xml?channel_id=");
@@ -138,7 +173,7 @@
                             let videoNumber = (iframe.getAttribute('vnum') ? Number(iframe.getAttribute('vnum')) : 0);
                             let link = data.items[videoNumber].link;
                             id = link.substr(link.indexOf("=") + 1);
-                            iframe.setAttribute("src", "https://youtube.com/embed/" + id + "?controls=0&autoplay=1");
+                            iframe.setAttribute("src", "https://youtube.com/embed/" + id + "?controls=0&autoplay=0");
                         }
                     );
                 }
@@ -147,7 +182,7 @@
                     loadVideo(iframes[i]);
                 }
             </script>
-        </div>
+        
     </div>
 
     </div>
