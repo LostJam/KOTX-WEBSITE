@@ -13,27 +13,29 @@ body {
 
 /* for eggroll pls feel free to change fonts! */
 h1 {
-    font-family: "Arvo";
-    font-weight: normal;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    font-weight: light;
     font-size: 55px;
     text-align: center;
-    color: rgb(252, 180, 180);
+    color: #fff;
     margin: 0;
     padding: 0;
 }
 
 h2 {
-    font-family: "Arvo";
-    font-weight: normal;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    font-weight: light;
     font-size: 40px;
     text-align: center;
-    color: #de5559;
+    color: #fff;
     margin: 0;
     padding: 0;
 }
 
 h3 {
-    font-family: Oswald;
+    font-family: 'Nunito', sans-serif;
     font-weight: normal;
     font-size: 16px;
     text-align: center;
@@ -62,21 +64,25 @@ h3 {
     align-items: center;
     padding: 1em;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.57);
+   /* background-color: rgba(0, 0, 0, 0.57);*/
     position: fixed;
-    font-family: "Wellfleet";
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.3px;
+    /*text-transform: uppercase;*/
+    font-weight: 500;
 }
 
 #home a {
     color: #fff;
     text-decoration: none;
-    font-size: 150%;
-    font-weight: bold;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 
 img#klogo {
-    width: 300px;
+    width: 400px;
 }
 
 .logo-container {
@@ -85,21 +91,22 @@ img#klogo {
     justify-content: center;
     align-items: center;
     height: 100%;
-    background-color: #862e5f  
+    background-color: #40337a; /*dark purple*/  
 }
 
 
-.socials-container {
+#socials-container {
     display: flex;
     width: 329px;
     margin-top: 3em;
     justify-content: space-evenly;
     align-items: center;
-   
-  
     /* width: calc(100% - 2em); */
     /* position: fixed; */
+}
 
+.social-logo {
+    width: 25px;
 }
 
 
@@ -110,20 +117,18 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 0.5em;
+    margin: 0 1em;
 }
 
 nav li a {
     color: #fff;
-    opacity: 0.6;
-    font-size: 16px;
     text-decoration: none;
 }
 
 nav li a.active, nav li a:focus {
     color: #fff;
     opacity: 1;
-    border-bottom: 2px solid #fff;
+    border-bottom: 1px solid #fff;
 }
 
 nav li a:hover {
@@ -136,16 +141,12 @@ nav li a:hover {
     width: 100%;
 }
 
-#slide1 {
-    background:url('../img/yuna.png') 50% 0 no-repeat fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    height: 80%;
-    margin: 0;
-    background-size: cover;
 
+#slide1 {
+/*    background: url(../img/vixx.png) 50% 0 no-repeat fixed;*/
+    color: #fff;
+    padding: 5em 0;
+    background-size: cover;
 }
 
 #slide2 {
@@ -161,10 +162,15 @@ nav li a:hover {
 }
 
 #slide3 {
-    background: url(../img/vixx.png) 50% 0 no-repeat fixed;
+    /*background:url('../img/yuna.png') 50% 0 no-repeat fixed;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #fff;
-    padding: 5em 0;
+    height: 80%;
+    margin: 0;
     background-size: cover;
+
 }
 
 
