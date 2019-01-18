@@ -9,6 +9,8 @@ body {
     margin: 0;
     padding: 0;
     background-color: black;
+    font-family:'Nunito', sans-serif;
+    color: #fff;
 }
 
 /* for eggroll pls feel free to change fonts! */
@@ -18,7 +20,6 @@ h1 {
     font-weight: light;
     font-size: 55px;
     text-align: center;
-    color: #fff;
     margin: 0;
     padding: 0;
 }
@@ -29,7 +30,6 @@ h2 {
     font-weight: light;
     font-size: 40px;
     text-align: center;
-    color: #fff;
     margin: 0;
     padding: 0;
 }
@@ -133,13 +133,9 @@ nav li a.active, nav li a:focus {
 
 nav li a:hover {
     color: #fff;
-    opacity: 1;
+    border-bottom: 1px solid #fff;
 }
 
-#slide1,
-#slide2 {
-    width: 100%;
-}
 
 
 #slide1 {
@@ -151,14 +147,13 @@ nav li a:hover {
 
 #slide2 {
     background-color: #fff;
-    color: #333333;
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90%;
+    color: black;
+    height: 100%;
     margin: 0 auto;
-    overflow: hidden;
-
 }
 
 #slide3 {
@@ -167,10 +162,27 @@ nav li a:hover {
     justify-content: center;
     align-items: center;
     color: #fff;
-    height: 80%;
-    margin: 0;
+    height: 100%;
+    margin: 0 auto;
     background-size: cover;
 
+}
+
+#footer {
+    display: flex;
+    background-color: #40337a; /*dark purple*/ 
+    height: 20%;
+    padding: 25px 25px;
+}
+#footer a{
+    color: #C5C5F9; /*light purple*/
+    text-decoration: none;
+}
+#footer a:hover{
+    color: #fff; 
+}
+.footer-column{
+    margin: 0 50px;
 }
 
 
