@@ -171,7 +171,7 @@ nav li a:hover {
 #footer {
     display: flex;
     background-color: #40337a; /*dark purple*/ 
-    height: 20%;
+    height: 25%;
     padding: 25px 25px;
 }
 #footer a{
@@ -183,6 +183,9 @@ nav li a:hover {
 }
 .footer-column{
     margin: 0 50px;
+}
+.sponsor-logo{
+	width: 150px;
 }
 
 
